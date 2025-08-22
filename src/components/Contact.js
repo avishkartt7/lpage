@@ -29,12 +29,6 @@ const Contact = () => {
         </div>
         <div className="container">
           <div className="contact-header-content">
-            <div className="saferoads-logo-contact">
-              <div className="diamond-logo">
-                <span>SAFER ROADS</span>
-                <small>AUSTRALIA</small>
-              </div>
-            </div>
             <h2>Contact Us</h2>
             <p>We'll guide you through compliance, planning, and permits—start your project with confidence.</p>
             
@@ -57,7 +51,17 @@ const Contact = () => {
               <h3>Get A Free Quote</h3>
               <p>Speak with our expert team today for a fast, no-obligation quote tailored to your traffic management needs.</p>
               
-              <button className="btn-primary contact-phone">📞 0459 449 651</button>
+              <div className="contact-phone-card">
+                <div className="phone-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <div className="phone-content">
+                  <span className="phone-label">Call Now for Free Quote</span>
+                  <a href="tel:0459449651" className="phone-number">0459 449 651</a>
+                </div>
+              </div>
 
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
@@ -132,25 +136,17 @@ const Contact = () => {
               </div>
 
               <div className="map-section">
-                <img src="/images/melbourne-map.jpg" alt="Melbourne Map" className="map-placeholder" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1635959716777!5v1635959716777"
+                  width="100%"
+                  height="350"
+                  style={{ border: 0, borderRadius: '12px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Melbourne Map - Service Area"
+                ></iframe>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="contact-footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-logo">
-              <div className="diamond-logo">
-                <span>SAFER ROADS</span>
-                <small>AUSTRALIA</small>
-              </div>
-            </div>
-            <div className="footer-text">
-              <p>Copyright © 2025. the traffic management plans company All rights reserved. </p>
             </div>
           </div>
         </div>
