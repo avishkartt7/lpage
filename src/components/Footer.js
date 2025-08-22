@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-left">
             <div className="footer-logo">
-              <img src="/images/logo.png" alt="The Traffic Management Plans Company" />
+              <img src="/images/logo.png" alt="Traffic Management Plans Company" />
             </div>
-            <p>The Traffic Management Plans Company is a specialist in providing Traffic Management Plans to reduce risk to the public, our clients and other stakeholders.</p>
+            <p>Traffic Management Plans Company is a specialist in providing Traffic Management Plans to reduce risk to the public, our clients and other stakeholders. We maintain the safety of road workers, road users, pedestrians and crowds across Melbourne.</p>
           </div>
           
           <div className="footer-center">
@@ -19,6 +19,7 @@ const Footer = () => {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
@@ -29,7 +30,8 @@ const Footer = () => {
               <h3>CONTACT US</h3>
               <div className="contact-info">
                 <p><strong>Phone:</strong> 0451 661 660</p>
-                <p><strong>Email:</strong> info@thetmpcompany.com.au</p>
+                <p><strong>Email:</strong> info@trafficmanagementplans.com.au</p>
+                <p><strong>Service Area:</strong> Melbourne Wide, Victoria</p>
               </div>
             </div>
           </div>
@@ -37,7 +39,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>© Copyright <strong>the traffic management plans company</strong>. All Rights Reserved</p>
+            <p>© Copyright <strong>Traffic Management Plans Company</strong>. All Rights Reserved</p>
             <div className="footer-scroll-top">
               <button className="scroll-top-btn" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                 ↑

@@ -79,8 +79,6 @@ body {
   width: auto;
 }
 
-/* Diamond Logo - REMOVED */
-
 /* Header Styles */
 .main-header {
   background: white;
@@ -116,6 +114,50 @@ body {
 
 .nav a:hover {
   color: #ff6b35;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #20b958, #0f7a6e);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #ff6b35, #ff4500);
+  color: white;
+}
+
+.call-btn:hover {
+  background: linear-gradient(135deg, #ff5722, #e63900);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .mobile-menu-btn {
@@ -164,12 +206,16 @@ body {
 }
 
 .btn-submit {
-  background: #ff6b35;
+  background: #25D366;
   color: white;
   width: 100%;
   justify-content: center;
   padding: 15px;
   font-size: 16px;
+}
+
+.btn-submit:hover {
+  background: #20b958;
 }
 
 /* Hero Section */
@@ -250,27 +296,46 @@ body {
   margin-bottom: 60px;
 }
 
-/* Hero Bottom Section */
+/* ===== HERO BOTTOM SECTION WITH OVERLAPPING EFFECT ===== */
 .hero-bottom {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.95) 50%);
+  padding: 0 0 60px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-bottom-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
 }
 
+/* FEATURE CARDS FULL WIDTH */
+.feature-cards-full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  transform: translateY(-50px);
+  position: relative;
+  z-index: 8;
+}
+
+/* Left Side - Company Card */
 .accredited-card {
   background: #2c3e50;
   color: white;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   gap: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 6;
 }
 
 .card-icon {
@@ -278,45 +343,104 @@ body {
   padding: 15px;
   border-radius: 50%;
   font-size: 24px;
+  flex-shrink: 0;
 }
 
 .accredited-card h3 {
   color: #ff6b35;
   font-size: 14px;
   margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .accredited-card h4 {
   font-size: 18px;
   line-height: 1.3;
+  margin: 0;
 }
 
+/* ===== RIGHT SIDE - FEATURE CARDS WITH ICONS ===== */
 .feature-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 20px;
+  transform: translateY(-50px);
+  position: relative;
+  z-index: 8;
 }
 
 .feature-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px 25px;
   text-align: center;
-  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== ICON STYLING - PROPERLY DISPLAY IMAGES ===== */
 .feature-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6b35, #ffa500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* ICON IMAGES - MAKE SURE THEY SHOW */
+.feature-icon img,
+.feature-icon .icon-img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  /* Ensure images are visible */
+  opacity: 1 !important;
+  filter: none !important;
+  display: block !important;
+}
+
+/* Specific fix for construction traffic image */
+.feature-icon img[src*="construction traffic"],
+.feature-icon img[src*="construction%20traffic"] {
+  width: 45px !important;
+  height: 45px !important;
 }
 
 .feature-card h4 {
   color: #2c3e50;
-  margin-bottom: 10px;
   font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
 .feature-card p {
   color: #666;
   font-size: 14px;
   line-height: 1.5;
+  margin: 0;
 }
 
 /* About Section */
@@ -390,31 +514,6 @@ body {
 .about-image img {
   width: 100%;
   border-radius: 12px;
-}
-
-/* Stats Section */
-.stats-section {
-  background: #f8f9fa;
-  padding: 60px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  text-align: center;
-}
-
-.stat-number.orange {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #ff6b35;
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  color: #666;
-  font-size: 1.1rem;
 }
 
 /* Value Section */
@@ -534,7 +633,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .service-card {
@@ -542,11 +641,29 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
+.service-card.clickable {
+  cursor: pointer;
+}
+
+.service-card.clickable:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-card.active {
+  border: 3px solid #ff6b35;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+}
+
+.service-card.active .service-icon .orange-circle-large {
+  background: linear-gradient(135deg, #ff6b35, #ffa500);
+  transform: scale(1.1);
 }
 
 .service-image {
@@ -597,6 +714,91 @@ body {
   margin-bottom: 20px;
   line-height: 1.6;
   font-size: 14px;
+}
+
+.service-actions {
+  margin-top: 15px;
+}
+
+.click-indicator {
+  color: #ff6b35;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 6px 12px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+/* Service Details Section */
+.service-details {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+}
+
+.service-detail-content h3 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.service-detail-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.service-description {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-left: 4px solid #ff6b35;
+}
+
+.service-description p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.service-description p:last-child {
+  margin-bottom: 0;
+}
+
+.service-detail-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #e9ecef;
 }
 
 /* Why Choose Section */
@@ -783,8 +985,6 @@ body {
   z-index: -1;
 }
 
-/* SafeRoads Logo Contact - REMOVED */
-
 .contact-header h2 {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -839,25 +1039,33 @@ body {
   line-height: 1.7;
 }
 
-.contact-phone-card {
-  background: linear-gradient(135deg, #ff6b35, #ffa500);
-  color: white;
+.contact-phone-card, .contact-whatsapp-card {
   padding: 20px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.contact-phone-card:hover {
+.contact-phone-card {
+  background: linear-gradient(135deg, #ff6b35, #ffa500);
+  color: white;
+}
+
+.contact-whatsapp-card {
+  background: linear-gradient(135deg, #25D366, #20b958);
+  color: white;
+}
+
+.contact-phone-card:hover, .contact-whatsapp-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
 }
 
-.phone-icon {
+.phone-icon, .whatsapp-icon {
   background: rgba(255, 255, 255, 0.2);
   padding: 12px;
   border-radius: 50%;
@@ -865,12 +1073,12 @@ body {
   flex-shrink: 0;
 }
 
-.phone-content {
+.phone-content, .whatsapp-content {
   display: flex;
   flex-direction: column;
 }
 
-.phone-label {
+.phone-label, .whatsapp-label {
   font-size: 12px;
   opacity: 0.9;
   margin-bottom: 4px;
@@ -878,15 +1086,11 @@ body {
   letter-spacing: 0.5px;
 }
 
-.phone-number {
+.phone-number, .whatsapp-number {
   font-size: 18px;
   font-weight: 700;
   color: white;
   text-decoration: none;
-}
-
-.contact-phone {
-  margin-bottom: 40px;
 }
 
 .contact-form {
@@ -962,23 +1166,24 @@ body {
   border-radius: 12px;
 }
 
-/* Contact Footer - REMOVED */
+.map-section-large {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.map-section-large iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 12px;
+}
 
 /* Icon Image Styles */
 .icon-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.feature-icon .icon-img {
-  width: 40px;
-  height: 40px;
-}
-
-.card-icon .icon-img {
-  width: 24px;
-  height: 24px;
 }
 
 .orange-circle-large .icon-img {
@@ -1134,6 +1339,10 @@ body {
     gap: 10px;
   }
 
+  .header-actions {
+    display: none;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
@@ -1171,12 +1380,27 @@ body {
     align-items: center;
   }
 
+  /* Mobile Hero Bottom */
   .hero-bottom-content {
-    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
-  .feature-cards {
+  .feature-cards-full {
     grid-template-columns: 1fr;
+    gap: 15px;
+    transform: translateY(-30px);
+    max-width: 100%;
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .feature-icon img,
+  .feature-icon .icon-img {
+    width: 35px !important;
+    height: 35px !important;
   }
 
   .about-content {
@@ -1201,6 +1425,10 @@ body {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-detail-actions {
+    flex-direction: column;
   }
 
   .why-choose-content {
@@ -1236,90 +1464,5 @@ body {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-  }
-}
-/* Service Categories */
-.service-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 40px;
-  padding: 0 20px;
-}
-
-.service-category-btn {
-  background: #ff6b35;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.service-category-btn:hover {
-  background: #ff5722;
-  transform: translateY(-2px);
-}
-
-.service-category-btn.active {
-  background: #2c3e50;
-}
-
-/* Company Description */
-.company-description {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 60px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.company-description p {
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-.service-industries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 8px;
-  margin: 20px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.service-industries li {
-  color: #ff6b35;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-/* Responsive adjustments for service categories */
-@media (max-width: 768px) {
-  .service-categories {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .service-category-btn {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .company-description {
-    padding: 25px;
-    margin: 0 15px 40px;
-  }
-  
-  .service-industries {
-    grid-template-columns: 1fr;
   }
 }

@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Menu, X, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, Menu, X, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/971566085944', '_blank');
+  };
+
+  const handleCall = () => {
+    window.open('tel:+971566085944', '_self');
+  };
 
   return (
     <>
@@ -20,7 +28,7 @@ const Header = () => {
             </div>
             <div className="top-bar-center">
               <div className="saferoads-logo">
-                <img src="/images/saferoads-logo.png" alt="SafeRoads Australia Logo" className="logo-header" />
+                <img src="/images/saferoads-logo.png" alt="Traffic Management Plans Company Logo" className="logo-header" />
               </div>
             </div>
             <div className="top-bar-right">
@@ -40,7 +48,7 @@ const Header = () => {
         <div className="container">
           <div className="header-content">
             <div className="logo">
-              <img src="/images/logo.png" alt="SafeRoads Australia" />
+              <img src="/images/logo.png" alt="Traffic Management Plans Company" />
             </div>
             
             <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -52,6 +60,17 @@ const Header = () => {
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </nav>
+
+            <div className="header-actions">
+              <button className="contact-btn whatsapp-btn" onClick={handleWhatsApp} title="WhatsApp">
+                <MessageCircle size={20} />
+                <span>WhatsApp</span>
+              </button>
+              <button className="contact-btn call-btn" onClick={handleCall} title="Call Now">
+                <Phone size={20} />
+                <span>Call Now</span>
+              </button>
+            </div>
 
             <button 
               className="mobile-menu-btn"
