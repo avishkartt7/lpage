@@ -1,43 +1,54 @@
 import React from 'react';
 
 const Services = () => {
-  const services = [
+  const mainServices = [
     {
       icon: "icon-traffic-management.png",
       title: "Traffic Management Services",
       description: "We deliver safe, professional traffic control solutions to protect workers, motorists, and pedestrians across all types of worksites.",
       image: "service-construction.jpg",
-      buttonText: "GET A FREE QUOTE"
+      buttonText: "GET A FREE QUOTE",
+      buttonClass: "btn-primary"
     },
     {
-      icon: "icon-clipboard-plan.png",
+      icon: "icon-clipboard-plan.png", 
       title: "Traffic Management Plans",
       description: "Our expert team prepares detailed, compliant Traffic Management Plans tailored to your site conditions and permit requirements.",
       image: "service-event.jpg",
       buttonText: "📞 0459 449 651",
-      isPhone: true
+      buttonClass: "btn-secondary"
     },
     {
       icon: "icon-building.png",
-      title: "Construction Traffic Management Plans",
+      title: "Construction Traffic Management Plans", 
       description: "We develop Construction TMPs to meet council and planning permit conditions for larger building and infrastructure projects.",
       image: "service-maintenance.jpg",
-      buttonText: "GET A FREE QUOTE"
+      buttonText: "GET A FREE QUOTE",
+      buttonClass: "btn-primary"
     },
     {
       icon: "icon-warning.png",
       title: "Traffic Impact Assessments",
       description: "Our engineers assess the impact of your development on surrounding traffic, helping secure planning approvals with well-supported reports.",
-      image: "service-flagging.jpg",
+      image: "service-flagging.jpg", 
       buttonText: "📞 0459 449 651",
-      isPhone: true
+      buttonClass: "btn-secondary"
     },
     {
       icon: "icon-road.png",
       title: "Swept Path Analysis",
       description: "We provide accurate swept path diagrams to demonstrate vehicle access and movement around tight or complex sites.",
       image: "portfolio-1.jpg",
-      buttonText: "GET A FREE QUOTE"
+      buttonText: "GET A FREE QUOTE", 
+      buttonClass: "btn-primary"
+    },
+    {
+      icon: "icon-team.png",
+      title: "Labour Hire Services", 
+      description: "Professional traffic control personnel available for hire to support your project requirements with trained and certified staff.",
+      image: "portfolio-2.jpg",
+      buttonText: "GET A FREE QUOTE",
+      buttonClass: "btn-primary"
     }
   ];
 
@@ -45,12 +56,53 @@ const Services = () => {
     <section className="services" id="services">
       <div className="container">
         <div className="services-header">
-          <h2>Our Services</h2>
-          <p>Complete Traffic Management Solutions</p>
+          <h2>Services</h2>
         </div>
 
+        {/* Service Category Buttons */}
+        <div className="service-categories">
+          <button className="service-category-btn active">Traffic Management Services</button>
+          <button className="service-category-btn">Traffic Management Plans</button>
+          <button className="service-category-btn">Construction Traffic Management Plans</button>
+          <button className="service-category-btn">Traffic Impact Assessments</button>
+          <button className="service-category-btn">Swept Path Analysis</button>
+          <button className="service-category-btn">Labour Hire Services</button>
+        </div>
+
+        {/* Company Description */}
+        <div className="company-description">
+          <p>
+            Traffic Management Plans Company are industry leaders in Traffic Management Services - offering clients premium quality Traffic Management Solutions delivered by our large, trained and experienced team. Traffic Management Plans Company maintain the safety of road workers, road users, pedestrians and crowds by providing appropriate traffic management services to a range of clients including state and local governments, utility companies, major construction companies and event managers.
+          </p>
+          
+          <p>
+            Our team of experienced professionals can adapt to the diverse requirements of individual clients and projects. Our management team prides itself on professionalism, knowledge and experience in all areas of traffic management. Our job safety analysis, hazard risk assessment and VicRoad pre-qualification processes are second to none.
+          </p>
+          
+          <p>Traffic Management Plans Company provides Traffic Management Plans to a range of industries including:</p>
+          
+          <ul className="service-industries">
+            <li>• Roadside Works</li>
+            <li>• Asphalting & Road Profiling</li>
+            <li>• Line Marking</li>
+            <li>• Construction Works</li>
+            <li>• Council Works</li>
+            <li>• Events</li>
+            <li>• Festivals</li>
+            <li>• Cabling</li>
+            <li>• General Maintenance Works</li>
+            <li>• Landscaping / Tree Services</li>
+            <li>• Emergency Utility Works</li>
+          </ul>
+          
+          <p>
+            Traffic Management Planning is a detailed undertaking as all potential risks need to be accounted for such as side roads, direction of traffic flow, road speeds and car parking allocations. The Team at Traffic Management Plans Company will ensure that plans are created that take into account all situations.
+          </p>
+        </div>
+
+        {/* Original Services Grid - keeping for visual consistency */}
         <div className="services-grid">
-          {services.map((service, index) => (
+          {mainServices.map((service, index) => (
             <div key={index} className="service-card">
               <div className="service-image">
                 <img src={`/images/${service.image}`} alt={service.title} />
@@ -65,7 +117,7 @@ const Services = () => {
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 
-                <button className={service.isPhone ? "btn-secondary" : "btn-primary"}>
+                <button className={service.buttonClass}>
                   {service.buttonText}
                 </button>
               </div>

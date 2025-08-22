@@ -1238,3 +1238,88 @@ body {
     text-align: center;
   }
 }
+/* Service Categories */
+.service-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.service-category-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-category-btn:hover {
+  background: #ff5722;
+  transform: translateY(-2px);
+}
+
+.service-category-btn.active {
+  background: #2c3e50;
+}
+
+/* Company Description */
+.company-description {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.company-description p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.service-industries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-industries li {
+  color: #ff6b35;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Responsive adjustments for service categories */
+@media (max-width: 768px) {
+  .service-categories {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-category-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .company-description {
+    padding: 25px;
+    margin: 0 15px 40px;
+  }
+  
+  .service-industries {
+    grid-template-columns: 1fr;
+  }
+}
