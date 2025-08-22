@@ -18,67 +18,78 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="welcome-text">WELCOME TO TRAFFIC MANAGEMENT PLANS COMPANY</div>
+            <div className="welcome-text">MELBOURNE'S PREMIER TRAFFIC MANAGEMENT EXPERTS</div>
             <h1>
-              <span className="get-quote">GET A FREE QUOTE</span>
+              <span className="get-quote">PROFESSIONAL TRAFFIC CONTROL</span>
               <br />
-              From Melbourne's Leading Traffic
+              Safe & Compliant Solutions
               <br />
-              Control & Management Specialists
+              For Every Project
             </h1>
             
             <p>
-              Traffic Management Plans Company are industry leaders in Traffic Management Services offering clients premium quality Traffic 
-              Management Solutions delivered by our trained and experienced team.
+              We deliver comprehensive traffic management services across Melbourne, ensuring safety and compliance 
+              for construction sites, events, and roadwork projects with our certified team and proven expertise.
             </p>
             
             <div className="hero-buttons">
-              <button className="btn-primary" onClick={handleWhatsApp}>GET A FREE QUOTE</button>
-              <button className="btn-secondary" onClick={handleCall}>📞 0451 661 660</button>
+              <button className="btn-primary" onClick={handleWhatsApp}>GET FREE CONSULTATION</button>
+              <button className="btn-secondary" onClick={handleCall}>📞 Call Expert Team</button>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Bottom Section with Cards */}
+      {/* Bottom Section with 3 Feature Cards */}
       <div className="hero-bottom">
         <div className="container">
           <div className="hero-bottom-content">
-            {/* Left Side - Blue Card */}
-            <div className="accredited-card">
-              <div className="card-icon">
-                {/* No image - just clean orange circle */}
-              </div>
-              <div className="card-content">
-                <h3>TRAFFIC MANAGEMENT PLANS COMPANY</h3>
-                <h4>Fully Accredited VicRoads Traffic Management Experts</h4>
-              </div>
-            </div>
-
-            {/* Right Side - Three Feature Cards */}
             <div className="feature-cards">
-              <div className="feature-card">
-                <div className="feature-icon">
-                  {/* No image - just clean orange circle */}
+              {/* CARD 1 - Traffic Solutions with Background Image */}
+              <div className="feature-card card-with-image">
+                <div className="card-image-section">
+                  <img 
+                    src="/images/construction%20traffic.png" 
+                    alt="Professional Traffic Management" 
+                    className="card-main-image" 
+                    onError={(e) => {
+                      console.log('Image failed to load, trying alternative path');
+                      e.target.src = "/images/construction-traffic.png";
+                    }}
+                  />
                 </div>
-                <h4>End-To-End Traffic Solutions</h4>
-                <p>From planning to execution, we manage every stage of your traffic control project.</p>
+                <div className="card-content-with-image">
+                  <h4>Complete Traffic Management</h4>
+                  <p>Professional traffic control solutions from planning through implementation for all project types.</p>
+                </div>
               </div>
               
-              <div className="feature-card">
-                <div className="feature-icon">
-                  {/* No image - just clean orange circle */}
+              {/* CARD 2 - Expert Team with Getty Image */}
+              <div className="feature-card card-with-image">
+                <div className="card-image-section">
+                  <img 
+                    src="/images/gettyimages-2202496350-612x612.jpg" 
+                    alt="Professional Expert Team" 
+                    className="card-main-image" 
+                    onError={(e) => {
+                      console.log('Team image failed to load');
+                      e.target.style.display = 'none';
+                    }}
+                  />
                 </div>
-                <h4>Experienced, Qualified Team</h4>
-                <p>Our team is fully trained, accredited, and backed by years of industry experience.</p>
+                <div className="card-content-with-image">
+                  <h4>Certified Expert Team</h4>
+                  <p>VicRoads accredited professionals with extensive experience in traffic management and safety protocols.</p>
+                </div>
               </div>
               
+              {/* CARD 3 - Government Trust */}
               <div className="feature-card">
                 <div className="feature-icon">
-                  {/* No image - just clean orange circle */}
+                  <img src="/images/icon-government.png" alt="Government Icon" className="icon-img" />
                 </div>
-                <h4>Trusted by Government & Industry</h4>
-                <p>We proudly support councils, utilities, contractors and event managers across Victoria.</p>
+                <h4>Government Approved</h4>
+                <p>Trusted by councils, utilities, and major contractors across Victoria for reliable compliance solutions.</p>
               </div>
             </div>
           </div>

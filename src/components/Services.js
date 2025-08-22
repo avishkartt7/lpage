@@ -86,7 +86,7 @@ Our labour hire services include fully trained and certified traffic control per
       icon: "icon-traffic-management.png",
       title: "Traffic Management Services",
       description: "We deliver safe, professional traffic control solutions to protect workers, motorists, and pedestrians across all types of worksites.",
-      image: "construction traffic.png"
+      image: "construction-traffic.png" // FIXED: Changed from "construction traffic.png" to "construction-traffic.png"
     },
     {
       id: 'traffic-plans',
@@ -142,10 +142,25 @@ Our labour hire services include fully trained and certified traffic control per
               onClick={() => setActiveService(service.id)}
             >
               <div className="service-image">
-                <img src={`/images/${service.image}`} alt={service.title} />
+                <img 
+                  src={`/images/${service.image}`} 
+                  alt={service.title}
+                  onError={(e) => {
+                    console.log(`Image failed to load: /images/${service.image}`);
+                    e.target.style.display = 'none';
+                  }}
+                />
                 <div className="service-icon">
                   <div className="orange-circle-large">
-                    <img src={`/images/${service.icon}`} alt="Service Icon" className="icon-img" />
+                    <img 
+                      src={`/images/${service.icon}`} 
+                      alt="Service Icon" 
+                      className="icon-img"
+                      onError={(e) => {
+                        console.log(`Icon failed to load: /images/${service.icon}`);
+                        e.target.style.display = 'none';
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -168,7 +183,7 @@ Our labour hire services include fully trained and certified traffic control per
             <h3>{serviceContent[activeService].title}</h3>
             <div className="service-description">
               {serviceContent[activeService].content.split('\n').map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                paragraph.trim() && <p key={index}>{paragraph}</p>
               ))}
             </div>
             
@@ -177,7 +192,7 @@ Our labour hire services include fully trained and certified traffic control per
                 GET A FREE QUOTE
               </button>
               <button className="btn-secondary" onClick={handleCall}>
-                📞 +971 56 608 5944
+                📞 0451 661 660
               </button>
             </div>
           </div>
