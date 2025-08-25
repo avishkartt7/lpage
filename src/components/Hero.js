@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Bottom Section with 3 Feature Cards */}
+      {/* Bottom Section with 2 Feature Cards */}
       <div className="hero-bottom">
         <div className="container">
           <div className="hero-bottom-content">
@@ -60,7 +60,7 @@ const Hero = () => {
                 </div>
                 <div className="card-content-with-image">
                   <h4>Complete Traffic Management</h4>
-                  <p></p>
+                  <p>Professional traffic control solutions for all project types and site conditions across Victoria.</p>
                 </div>
               </div>
               
@@ -81,15 +81,6 @@ const Hero = () => {
                   <h4>Certified Expert Team</h4>
                   <p>VicRoads accredited professionals with extensive experience in traffic management and safety protocols.</p>
                 </div>
-              </div>
-              
-              {/* CARD 3 - Government Trust */}
-              <div className="feature-card">
-                <div className="feature-icon">
-                  <img src="/images/icon-government.png" alt="Government Icon" className="icon-img" />
-                </div>
-                <h4>Government Approved</h4>
-                <p>Trusted by councils, utilities, and major contractors across Victoria for reliable compliance solutions.</p>
               </div>
             </div>
           </div>

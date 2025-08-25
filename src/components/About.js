@@ -104,7 +104,7 @@ const About = () => {
                 <div className="card-icon">
                   <img src="/images/icon-clipboard-white.png" alt="Clipboard Icon" className="icon-img" />
                 </div>
-                <h3>VicRoads Accredited & Fully Compliant</h3>
+                <h3></h3>
                 <p>Traffic Management Plans Company is accredited by VicRoads and complies with AS1742.3-2002, the Victorian Road Management Act 2004, and all relevant Codes of Practice.</p>
                 <button className="btn-primary" onClick={handleWhatsApp}>GET A FREE QUOTE</button>
               </div>
