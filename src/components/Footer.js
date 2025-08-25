@@ -30,8 +30,8 @@ const Footer = () => {
               <h3>CONTACT US</h3>
               <div className="contact-info">
                 <p><strong>Phone:</strong> 0451 661 660</p>
-                <p><strong>Email:</strong> info@trafficmanagementplans.com.au</p>
-                <p><strong>Service Area:</strong> Melbourne Wide, Victoria</p>
+                <p><strong>Email:</strong> info@thetmpcompany.com.au</p>
+                <p><strong>Service Area:</strong> Victoria, New South Wales</p>
               </div>
             </div>
           </div>

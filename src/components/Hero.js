@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="hero-text">
             <div className="welcome-text">MELBOURNE'S PREMIER TRAFFIC MANAGEMENT EXPERTS</div>
             <h1>
-              <span className="get-quote">PROFESSIONAL TRAFFIC CONTROL</span>
+              <span className="get-quote"></span>
               <br />
               Safe & Compliant Solutions
               <br />
@@ -60,7 +60,7 @@ const Hero = () => {
                 </div>
                 <div className="card-content-with-image">
                   <h4>Complete Traffic Management</h4>
-                  <p>Professional traffic control solutions from planning through implementation for all project types.</p>
+                  <p></p>
                 </div>
               </div>
               

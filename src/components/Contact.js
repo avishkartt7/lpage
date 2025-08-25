@@ -151,7 +151,7 @@ Message: ${formData.message}`;
                     <img src="/images/icon-location.png" alt="Location Icon" className="icon-img" />
                   </div>
                   <h4>Service Area</h4>
-                  <p>Melbourne Wide<br />Victoria, Australia</p>
+                  <p>Victoria<br />New South Wales</p>
                 </div>
                 
                 <div className="info-card">
