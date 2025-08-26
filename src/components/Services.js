@@ -83,45 +83,62 @@ Our labour hire services include fully trained and certified traffic control per
   const serviceCards = [
     {
       id: 'traffic-management',
-      icon: "icon-traffic-management.png",
       title: "Traffic Management Services",
       description: "We deliver safe, professional traffic control solutions to protect workers, motorists, and pedestrians across all types of worksites.",
-      image: "construction-traffic.png" // FIXED: Changed from "construction traffic.png" to "construction-traffic.png"
+      image: "construction-traffic.png"
     },
     {
       id: 'traffic-plans',
-      icon: "icon-clipboard-plan.png",
       title: "Traffic Management Plans",
       description: "Our expert team prepares detailed, compliant Traffic Management Plans tailored to your site conditions and permit requirements.",
       image: "service-event.jpg"
     },
     {
       id: 'construction-plans',
-      icon: "icon-building.png",
       title: "Construction Traffic Management Plans",
       description: "We develop Construction TMPs to meet council and planning permit conditions for larger building and infrastructure projects.",
       image: "service-maintenance.jpg"
     },
     {
       id: 'traffic-assessment',
-      icon: "icon-warning.png",
       title: "Traffic Impact Assessments",
       description: "Our engineers assess the impact of your development on surrounding traffic, helping secure planning approvals with well-supported reports.",
       image: "service-flagging.jpg"
     },
     {
       id: 'swept-path',
-      icon: "icon-road.png",
       title: "Swept Path Analysis",
       description: "We provide accurate swept path diagrams to demonstrate vehicle access and movement around tight or complex sites.",
       image: "portfolio-1.jpg"
     },
     {
       id: 'labour-hire',
-      icon: "icon-team.png",
       title: "Labour Hire Services",
       description: "Professional traffic control personnel available for hire to support your project requirements with trained and certified staff.",
       image: "portfolio-2.jpg"
+    }
+  ];
+
+  const whyChooseUsFeatures = [
+    {
+      title: "Permit-Ready Plans",
+      description: "We handle CTMPs, TIAs, and assessments for fast approvals.",
+      color: "orange"
+    },
+    {
+      title: "Certified Safety Systems",
+      description: "We operate under nationally certified safety and quality systems.",
+      color: "blue"
+    },
+    {
+      title: "Experienced Team",
+      description: "Our people are the backbone of our service excellence.",
+      color: "blue"
+    },
+    {
+      title: "Diverse Industry Coverage",
+      description: "We support projects in construction, events, utilities, and more.",
+      color: "blue"
     }
   ];
 
@@ -152,15 +169,7 @@ Our labour hire services include fully trained and certified traffic control per
                 />
                 <div className="service-icon">
                   <div className="orange-circle-large">
-                    <img 
-                      src={`/images/${service.icon}`} 
-                      alt="Service Icon" 
-                      className="icon-img"
-                      onError={(e) => {
-                        console.log(`Icon failed to load: /images/${service.icon}`);
-                        e.target.style.display = 'none';
-                      }}
-                    />
+                    {/* Icon will be added later */}
                   </div>
                 </div>
               </div>
@@ -199,7 +208,7 @@ Our labour hire services include fully trained and certified traffic control per
         </div>
       </div>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - FIXED */}
       <div className="why-choose-section">
         <div className="why-choose-bg">
           <img src="/images/hero-bg.jpg" alt="Background" />
@@ -207,7 +216,7 @@ Our labour hire services include fully trained and certified traffic control per
         <div className="container">
           <div className="why-choose-content">
             <div className="why-choose-text">
-              <div className="section-label orange">WHY CHOOSE US</div>
+              <div className="section-label white">WHY CHOOSE US</div>
               <h2>We Go Beyond Standard Traffic Management</h2>
               <p>Our commitment to compliance, safety, and reliability is backed by industry certifications, skilled professionals, and a deep understanding of permit and planning requirements. These key advantages set us apart and give our clients the confidence to focus on their projects while we take care of the rest.</p>
               
@@ -218,37 +227,15 @@ Our labour hire services include fully trained and certified traffic control per
             </div>
             
             <div className="why-choose-cards">
-              <div className="why-card orange-card">
-                <div className="card-icon">
-                  <img src="/images/icon-permit.png" alt="Permit Icon" className="icon-img" />
+              {whyChooseUsFeatures.map((feature, index) => (
+                <div key={index} className={`why-card ${feature.color}-card`}>
+                  <div className="card-icon">
+                    {/* Image will be added later */}
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
                 </div>
-                <h3>Permit-Ready Plans</h3>
-                <p>We handle CTMPs, TIAs, and assessments for fast approvals.</p>
-              </div>
-              
-              <div className="why-card blue-card">
-                <div className="card-icon">
-                  <img src="/images/icon-shield.png" alt="Shield Icon" className="icon-img" />
-                </div>
-                <h3>Certified Safety Systems</h3>
-                <p>We operate under nationally certified safety and quality systems.</p>
-              </div>
-              
-              <div className="why-card blue-card">
-                <div className="card-icon">
-                  <img src="/images/icon-team.png" alt="Team Icon" className="icon-img" />
-                </div>
-                <h3>Experienced Team</h3>
-                <p>Our people are the backbone of our service excellence.</p>
-              </div>
-              
-              <div className="why-card blue-card">
-                <div className="card-icon">
-                  <img src="/images/icon-industry.png" alt="Industry Icon" className="icon-img" />
-                </div>
-                <h3>Diverse Industry Coverage</h3>
-                <p>We support projects in construction, events, utilities, and more.</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
