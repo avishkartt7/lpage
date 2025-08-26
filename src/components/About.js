@@ -18,7 +18,8 @@ const About = () => {
             
             <h2>We regularly provide last-minute Traffic Management Plans to government and private clients.</h2>
             
-            <div className="about-description">
+            {/* Option 1: Single Enhanced Card */}
+            <div className="about-description-enhanced">
               <p>
                 Traffic Management Plans Company is a specialist in providing Traffic Management Plans to reduce risk to the public, our clients and other stakeholders. We are committed to continuously improve our client service and business practices.
               </p>
@@ -31,6 +32,29 @@ const About = () => {
                 Our job safety analysis, worksite hazard risk assessment and VicRoads pre-qualification processes are second to none. We help clients meet all regulatory requirements while keeping road users, pedestrians, and workers safe across Victoria.
               </p>
             </div>
+
+            {/* Option 2: Multiple Text Cards - Alternative Layout */}
+            {/* Uncomment this section if you prefer multiple cards
+            <div className="about-text-cards">
+              <div className="about-text-card">
+                <p>
+                  Traffic Management Plans Company is a specialist in providing Traffic Management Plans to reduce risk to the public, our clients and other stakeholders. We are committed to continuously improve our client service and business practices.
+                </p>
+              </div>
+              
+              <div className="about-text-card">
+                <p>
+                  We will further enhance our existing capability in the provision of Traffic Management Plans. Our management team prides itself on professionalism, knowledge and experience in all areas of Traffic Management Plans serving Melbourne wide.
+                </p>
+              </div>
+              
+              <div className="about-text-card">
+                <p>
+                  Our job safety analysis, worksite hazard risk assessment and VicRoads pre-qualification processes are second to none. We help clients meet all regulatory requirements while keeping road users, pedestrians, and workers safe across Victoria.
+                </p>
+              </div>
+            </div>
+            */}
 
             <div className="checkmarks">
               <div className="check-item">
@@ -81,7 +105,14 @@ const About = () => {
           </div>
           
           <div className="about-image">
-            <img src="/images/about-main.jpg" alt="Traffic Management Team" />
+            <img 
+              src="/images/team.png" 
+              alt="Traffic Management Team" 
+              onError={(e) => {
+                console.log('Team image failed to load, trying fallback');
+                e.target.src = "/images/about-main.jpg";
+              }}
+            />
           </div>
         </div>
       </div>

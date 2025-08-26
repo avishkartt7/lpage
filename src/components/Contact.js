@@ -145,10 +145,15 @@ Message: ${formData.message}`;
 
             {/* Right Side - Info & Map */}
             <div className="contact-info-section">
+              {/* UPDATED INFO CARDS WITH ICONS */}
               <div className="contact-info-cards">
                 <div className="info-card">
                   <div className="info-icon orange-circle">
-                    <img src="/images/icon-location.png" alt="Location Icon" className="icon-img" />
+                    {/* Map Pin Icon for Service Area */}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="10" r="3" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                   <h4>Service Area</h4>
                   <p>Victoria<br />New South Wales</p>
@@ -156,7 +161,11 @@ Message: ${formData.message}`;
                 
                 <div className="info-card">
                   <div className="info-icon orange-circle">
-                    <img src="/images/icon-clock.png" alt="Clock Icon" className="icon-img" />
+                    {/* Clock Icon for Operating Hours */}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <polyline points="12,6 12,12 16,14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                   <h4>Operating Hours</h4>
                   <p>Open 7 Days<br />24 Hours Available</p>
