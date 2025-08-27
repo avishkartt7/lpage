@@ -20,10 +20,8 @@ const Header = () => {
           <div className="top-bar-content">
             <div className="top-bar-left">
               <span className="top-bar-item">
-                <div className="orange-circle">
-                  <MapPin size={12} />
-                </div>
-                SERVING VICTORIA & NEW SOUTH WALES
+                
+                
               </span>
             </div>
             <div className="top-bar-center">
