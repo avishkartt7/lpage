@@ -23,7 +23,7 @@ const Header = () => {
                 <div className="orange-circle">
                   <MapPin size={12} />
                 </div>
-                SERVING MELBOURNE WIDE
+                SERVING VICTORIA & NEW SOUTH WALES
               </span>
             </div>
             <div className="top-bar-center">
