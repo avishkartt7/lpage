@@ -50,8 +50,8 @@ Message: ${formData.message}`;
             
             <div className="contact-nav">
               <span className="contact-nav-item active">CONTACT US</span>
-              <span className="contact-nav-divider">•</span>
-              <span className="contact-nav-item">GET A FREE QUOTE</span>
+              <span className="contact-nav-divider"></span>
+              <span className="contact-nav-item"></span>
             </div>
           </div>
         </div>

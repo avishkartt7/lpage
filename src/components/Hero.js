@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="welcome-text">MELBOURNE'S PREMIER TRAFFIC MANAGEMENT EXPERTS</div>
+            <div className="welcome-text"></div>
             <h1>
               <span className="get-quote"></span>
               <br />
