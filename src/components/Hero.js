@@ -18,10 +18,8 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <div className="welcome-text"></div>
+            <div className="welcome-text">Victoria & New South Wales Premier Traffic Management Experts</div>
             <h1>
-              <span className="get-quote"></span>
-              <br />
               Safe & Compliant Solutions
               <br />
               For Every Project
