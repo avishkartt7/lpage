@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const Services = () => {
   const [activeService, setActiveService] = useState('traffic-management');
 
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/61451661660', '_blank');
+  const handleEmail = () => {
+    window.open('mailto:info@thetmpcompany.com.au', '_blank');
   };
 
   const handleCall = () => {
@@ -197,7 +197,7 @@ Our labour hire services include fully trained and certified traffic control per
             </div>
             
             <div className="service-detail-actions">
-              <button className="btn-primary" onClick={handleWhatsApp}>
+              <button className="btn-primary" onClick={handleEmail}>
                 GET A FREE QUOTE
               </button>
               <button className="btn-secondary" onClick={handleCall}>
@@ -221,7 +221,7 @@ Our labour hire services include fully trained and certified traffic control per
               <p>Our commitment to compliance, safety, and reliability is backed by industry certifications, skilled professionals, and a deep understanding of permit and planning requirements. These key advantages set us apart and give our clients the confidence to focus on their projects while we take care of the rest.</p>
               
               <div className="why-choose-buttons">
-                <button className="btn-primary" onClick={handleWhatsApp}>GET A FREE QUOTE</button>
+                <button className="btn-primary" onClick={handleEmail}>GET A FREE QUOTE</button>
                 <button className="btn-secondary" onClick={handleCall}>📞 0451 661 660</button>
               </div>
             </div>

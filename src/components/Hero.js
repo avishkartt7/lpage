@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Hero = () => {
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/61451661660', '_blank');
+  const handleEmail = () => {
+    window.open('mailto:info@thetmpcompany.com.au', '_blank');
   };
 
   const handleCall = () => {
@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
             
             <div className="hero-buttons">
-              <button className="btn-primary" onClick={handleWhatsApp}>GET FREE CONSULTATION</button>
+              <button className="btn-primary" onClick={handleEmail}>GET FREE CONSULTATION</button>
               <button className="btn-secondary" onClick={handleCall}>📞 Call Expert Team</button>
             </div>
           </div>

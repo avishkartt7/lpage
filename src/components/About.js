@@ -1,8 +1,8 @@
 import React from 'react';
 
 const About = () => {
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/61451661660', '_blank');
+  const handleEmail = () => {
+    window.open('mailto:info@thetmpcompany.com.au', '_blank');
   };
 
   const handleCall = () => {
@@ -68,7 +68,7 @@ const About = () => {
             </div>
 
             <div className="about-buttons">
-              <button className="btn-primary" onClick={handleWhatsApp}>
+              <button className="btn-primary" onClick={handleEmail}>
                 <span>GET A FREE QUOTE</span>
               </button>
               <button className="btn-secondary phone-button" onClick={handleCall}>
